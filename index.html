@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="music-player">
+
+        <h1>🎵 Music Player</h1>
+
+        <!-- Album -->
+        <div class="album">
+            <div class="music-icon">🎶</div>
+        </div>
+
+        <!-- Song Information -->
+        <div class="song-info">
+
+            <h2 id="song-title">Song Title</h2>
+
+            <p id="artist">Artist</p>
+
+        </div>
+
+        <!-- Time -->
+        <div class="time">
+
+            <span id="current-time">0:00</span>
+
+            <span id="duration">0:00</span>
+
+        </div>
+
+        <!-- Progress Bar -->
+        <input
+            type="range"
+            id="progress"
+            value="0"
+            min="0"
+            max="100"
+        >
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <button onclick="previousSong()">⏮️</button>
+
+            <button
+                id="play-btn"
+                class="play"
+                onclick="togglePlay()">
+                ▶️
+            </button>
+
+            <button onclick="nextSong()">⏭️</button>
+
+        </div>
+
+        <!-- Volume -->
+        <div class="volume">
+
+            <span>🔊</span>
+
+            <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.7"
+            >
+
+        </div>
+
+        <!-- Autoplay -->
+        <label class="autoplay">
+
+            <input
+                type="checkbox"
+                id="autoplay"
+                checked
+            >
+
+            Autoplay next song
+
+        </label>
+
+        <!-- Playlist -->
+        <h3>Playlist</h3>
+
+        <ul id="playlist"></ul>
+
+        <!-- Audio -->
+        <audio id="audio"></audio>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
